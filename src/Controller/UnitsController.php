@@ -30,7 +30,7 @@ class UnitsController extends Controller {
             array_push($this->unitArray, $data->getId());
         }
 
-        return new JsonResponse(array('id' => $force, 'values' => $this->unitArray));
+        return new JsonResponse(array('id' => $force, 'unitIds' => $this->unitArray));
 
     }
 
