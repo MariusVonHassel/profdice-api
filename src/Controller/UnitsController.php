@@ -67,7 +67,7 @@ class UnitsController extends Controller {
 
         $this->setUnitAbilities($abilitiesValueJSON);
 
-        return new JsonResponse(array($this->setObject($databaseData)));
+        return new JsonResponse($this->setObject($databaseData));
 
     }
 
