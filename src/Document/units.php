@@ -102,7 +102,7 @@ class units {
     protected $points;
 
     /**
-     * @MongoDB\Field(type="int")
+     * @MongoDB\Field(type="collection")
      */
     protected $count;
 
