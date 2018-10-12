@@ -42,7 +42,7 @@ class units {
     protected $book;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $page;
 
@@ -52,57 +52,57 @@ class units {
     protected $stats;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $M;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $WS;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $BS;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $S;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $T;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $W;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $A;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $Ld;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $Sv;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $points;
 
     /**
-     * @MongoDB\Field(type="collection")
+     * @MongoDB\Field(type="int")
      */
     protected $count;
 
@@ -112,7 +112,7 @@ class units {
     protected $default;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $max;
 
@@ -158,7 +158,7 @@ class units {
     protected $weaponType;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $range;
 
@@ -168,17 +168,17 @@ class units {
     protected $weaponMode;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $weaponModeCount;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $AP;
 
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="int")
      */
     protected $D;
 
@@ -212,119 +212,6 @@ class units {
      * @MongoDB\Field(type="collection")
      */
     protected $abilityFactors;
-
-    /**
-     * @return mixed
-     */
-    public function getAbilityType()
-    {
-        return $this->abilityType;
-    }
-
-    /**
-     * @param mixed $abilityType
-     */
-    public function setAbilityType($abilityType): void
-    {
-        $this->abilityType = $abilityType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description): void
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescriptionShort()
-    {
-        return $this->descriptionShort;
-    }
-
-    /**
-     * @param mixed $descriptionShort
-     */
-    public function setDescriptionShort($descriptionShort): void
-    {
-        $this->descriptionShort = $descriptionShort;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAbilityFactors()
-    {
-        return $this->abilityFactors;
-    }
-
-    /**
-     * @param mixed $abilityFactors
-     */
-    public function setAbilityFactors($abilityFactors): void
-    {
-        $this->abilityFactors = $abilityFactors;
-    }
-
-
-    /**
-     * @return mixed
-     */
-    public function getRange()
-    {
-        return $this->range;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAP()
-    {
-        return $this->AP;
-    }
-
-    /**
-     * @param mixed $AP
-     */
-    public function setAP($AP): void
-    {
-        $this->AP = $AP;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getD()
-    {
-        return $this->D;
-    }
-
-    /**
-     * @param mixed $D
-     */
-    public function setD($D): void
-    {
-        $this->D = $D;
-    }
-
-    /**
-     * @param mixed $range
-     */
-    public function setRange($range): void
-    {
-        $this->range = $range;
-    }
 
     /**
      * @return mixed
@@ -761,6 +648,22 @@ class units {
     /**
      * @return mixed
      */
+    public function getRange()
+    {
+        return $this->range;
+    }
+
+    /**
+     * @param mixed $range
+     */
+    public function setRange($range): void
+    {
+        $this->range = $range;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getWeaponMode()
     {
         return $this->weaponMode;
@@ -793,6 +696,38 @@ class units {
     /**
      * @return mixed
      */
+    public function getAP()
+    {
+        return $this->AP;
+    }
+
+    /**
+     * @param mixed $AP
+     */
+    public function setAP($AP): void
+    {
+        $this->AP = $AP;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getD()
+    {
+        return $this->D;
+    }
+
+    /**
+     * @param mixed $D
+     */
+    public function setD($D): void
+    {
+        $this->D = $D;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getWeaponAbility()
     {
         return $this->weaponAbility;
@@ -805,6 +740,71 @@ class units {
     {
         $this->weaponAbility = $weaponAbility;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAbilityType()
+    {
+        return $this->abilityType;
+    }
+
+    /**
+     * @param mixed $abilityType
+     */
+    public function setAbilityType($abilityType): void
+    {
+        $this->abilityType = $abilityType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description): void
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescriptionShort()
+    {
+        return $this->descriptionShort;
+    }
+
+    /**
+     * @param mixed $descriptionShort
+     */
+    public function setDescriptionShort($descriptionShort): void
+    {
+        $this->descriptionShort = $descriptionShort;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAbilityFactors()
+    {
+        return $this->abilityFactors;
+    }
+
+    /**
+     * @param mixed $abilityFactors
+     */
+    public function setAbilityFactors($abilityFactors): void
+    {
+        $this->abilityFactors = $abilityFactors;
+    }
+
 
 }
 
