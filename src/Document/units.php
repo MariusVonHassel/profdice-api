@@ -188,6 +188,11 @@ class units {
     protected $weaponAbility;
 
     /**
+     * @MongoDB\Field(type="collection")
+     */
+    protected $replacementFor;
+
+    /**
      *
      * Abilities
      *
