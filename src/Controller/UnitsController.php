@@ -153,6 +153,17 @@ class UnitsController extends Controller {
     }
 
     private function setObject($databaseData, $weaponValue) {
+        $rangedReplacementFor = [];
+        $meleeReplacementFor = [];
+
+        if (isset($weaponValue->ranged->replacementFor)) {
+            $rangedReplacementFor = $weaponValue->ranged->replacementFor;
+        }
+
+        if (isset($weaponValue->melee->replacementFor)) {
+            $meleeReplacementFor = $weaponValue->melee->replacementFor;
+        }
+
         return array(
             "id" => $databaseData->getId(),
             "faction" => $databaseData->getFaction(),
@@ -165,12 +176,12 @@ class UnitsController extends Controller {
                 "ranged" => array(
                     "default" => $this->rangedDefault,
                     "replacement" => $this->rangedReplacement,
-                    "replacementFor" => $weaponValue->ranged->replacementFor
+                    "replacementFor" => $rangedReplacementFor
                 ),
                 "melee" => array(
                     "default" => $this->meleeDefault,
                     "replacement" => $this->meleeReplacement,
-                    "replacementFor" => $weaponValue->melee->replacementFor
+                    "replacementFor" => $meleeReplacementFor
                 ),
             ),
             "keywords" => $databaseData->getKeywords(),
