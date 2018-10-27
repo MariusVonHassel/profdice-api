@@ -165,12 +165,12 @@ class UnitsController extends Controller {
                 "ranged" => array(
                     "default" => $this->rangedDefault,
                     "replacement" => $this->rangedReplacement,
-                    "replacementFor" => $this->getReplacementFor()
+                    "replacementFor" => $databaseData->getReplacementFor()
                 ),
                 "melee" => array(
                     "default" => $this->meleeDefault,
                     "replacement" => $this->meleeReplacement,
-                    "replacementFor" => $this->getReplacementFor()
+                    "replacementFor" => $databaseData->getReplacementFor()
                 ),
             ),
             "keywords" => $databaseData->getKeywords(),
