@@ -810,6 +810,21 @@ class units {
         $this->abilityFactors = $abilityFactors;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getReplacementFor()
+    {
+        return $this->replacementFor;
+    }
+
+    /**
+     * @param mixed $replacementFor
+     */
+    public function setReplacementFor($replacementFor): void
+    {
+        $this->replacementFor = $replacementFor;
+    }
 
 }
 
