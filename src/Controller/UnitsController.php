@@ -67,7 +67,7 @@ class UnitsController extends Controller {
 
         $this->setUnitAbilities($abilitiesValueJSON);
 
-        return new JsonResponse($this->setObject($databaseData));
+        return new JsonResponse($this->setObject($databaseData), $weaponValueJSON);
 
     }
 
@@ -152,7 +152,7 @@ class UnitsController extends Controller {
 
     }
 
-    private function setObject($databaseData) {
+    private function setObject($databaseData, $weaponValue) {
         return array(
             "id" => $databaseData->getId(),
             "faction" => $databaseData->getFaction(),
@@ -165,12 +165,12 @@ class UnitsController extends Controller {
                 "ranged" => array(
                     "default" => $this->rangedDefault,
                     "replacement" => $this->rangedReplacement,
-                    "replacementFor" => $databaseData->getReplacementFor()
+                    "replacementFor" => $weaponValue->ranged->replacementFor
                 ),
                 "melee" => array(
                     "default" => $this->meleeDefault,
                     "replacement" => $this->meleeReplacement,
-                    "replacementFor" => $databaseData->getReplacementFor()
+                    "replacementFor" => $weaponValue->melee->replacementFor
                 ),
             ),
             "keywords" => $databaseData->getKeywords(),

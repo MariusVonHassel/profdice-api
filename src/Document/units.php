@@ -188,11 +188,6 @@ class units {
     protected $weaponAbility;
 
     /**
-     * @MongoDB\Field(type="collection")
-     */
-    protected $replacementFor;
-
-    /**
      *
      * Abilities
      *
@@ -808,22 +803,6 @@ class units {
     public function setAbilityFactors($abilityFactors): void
     {
         $this->abilityFactors = $abilityFactors;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getReplacementFor()
-    {
-        return $this->replacementFor;
-    }
-
-    /**
-     * @param mixed $replacementFor
-     */
-    public function setReplacementFor($replacementFor): void
-    {
-        $this->replacementFor = $replacementFor;
     }
 
 }
